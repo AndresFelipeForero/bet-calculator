@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "calculatorbetters": {
+      "hosting": {
+        "crudMaterialProyect": [
+          "calculatorbetters"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "calculatorbetters"
+  }
+}

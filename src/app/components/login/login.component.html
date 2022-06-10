@@ -1,0 +1,27 @@
+<div class="body">
+    <div class="login">
+
+      <mat-progress-spinner class="spinner" *ngIf="loading"
+        diameter="60"
+        color=""
+        mode="indeterminate"
+        strokeWidth="8">
+    </mat-progress-spinner>
+
+      <form *ngIf="!loading" [formGroup]="form">
+        <img src="./assets/img/login.png" alt="login" width="50%">
+        
+        <h1>Login</h1>
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>User</mat-label>
+            <input type="text" matInput autocomplete="off" formControlName="usuario">
+          </mat-form-field>
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput autocomplete="off" formControlName="password">
+          </mat-form-field>
+          <button class="ancho btn-login"  (click)="ingresar()" mat-raised-button color="primary" [disabled]="form.invalid">Ingresar</button>
+      </form>
+        
+    </div>
+</div>
