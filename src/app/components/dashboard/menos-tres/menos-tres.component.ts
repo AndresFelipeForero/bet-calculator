@@ -21,6 +21,7 @@ export class MenosTresComponent implements OnInit {
   goles: number = 2.5;
   esquinas: number = 9.5;
   selected = '0';
+  icon: string = "edit"
   
   
 
@@ -79,11 +80,11 @@ export class MenosTresComponent implements OnInit {
     let goles = this.form.value.golesEscogidos,
         segundos = 60 - this.form.value.segundos,
         minutos = 89 + parseInt(this.form.value.extraTime) - this.form.value.minutos;       
-    let y1 = 0,
-        y2 = 0,
+    let y1 = 1,
+        y2 = 1,
         b = 0;
-    let y2E = 0, //y2 esquinas
-        y1E = 0, //y2 esquinas
+    let y2E = 1, //y2 esquinas
+        y1E = 1, //y2 esquinas
         bE = 0; //y2 esquinas
 
         // if (minutos < 0){this.span = "Partido finalizado.  si está en tiempo extra, ingrese el valor 89 y agregue los minutos adicionales con el botón '1+'"
@@ -131,6 +132,7 @@ export class MenosTresComponent implements OnInit {
             //  y2 = this.datosDirectos[minutos][goles];
             
             if (minutos < 1) {
+              y2 = this.datosDirectos[minutos][goles];
               y2E = this.dataMenosEsquinas[minutos][esquinas]; //y2 esquinas
               y1E = 1;
               y1 = 1;
@@ -175,6 +177,15 @@ export class MenosTresComponent implements OnInit {
 
   cambiarFlag(){
     this.flag=!this.flag    
+  }
+
+  changeName(){
+    let $inputTitle = document.querySelector(".title-3")!
+    if ($inputTitle.toggleAttribute("disabled")) {
+      this.icon = "edit"    
+    } else {
+      this.icon = "save"  
+    }
   }
 
   dataMenosEsquinas: any[]= [

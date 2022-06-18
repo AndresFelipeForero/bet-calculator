@@ -3,86 +3,9 @@
         <span>Calculadoras</span>
     </mat-toolbar>    
 </div>
-<div class="body">
-    <mat-card class="calculadora-goles" >
-        <form [formGroup]="form" class="form" (submit)="submitForm()">
-            <mat-card-title class="title" color="primary">Calculadora de Goles</mat-card-title>
-            <div class="time-couta">
-              <div class="time">
-                <h4> Time <br>{{showTime}} </h4>
-              </div>
-              <div class="goles-esquinas">
-
-                <h4> Goles <br>{{yF}} </h4> &nbsp; &nbsp;&nbsp; &nbsp;
-                
-                <h4> Esquinas <br>{{yFE}} </h4>
-              </div>
-
-            </div>
-
-            <mat-divider></mat-divider>
-            <div class="min-seg">
-                <mat-form-field class="ancho" appearance="fill">
-                    <mat-label>Minuto</mat-label>
-                    <input type="number" class="primary " matInput autocomplete="off" formControlName="minutos" placeholder="minutos" min="75" max="89" maxlength="2">
-                  </mat-form-field>
-                
-                <mat-form-field class="ancho" appearance="fill">
-                    <mat-label>Segundo</mat-label>
-                    <input type="number" class="primary " matInput autocomplete="off" formControlName="segundos" placeholder="Segundo" min="0" max="59" maxlength="2">
-                  </mat-form-field>
-            </div>
-            <div class="goles-esquinas">
-              <mat-form-field class="goles" appearance="fill">
-                <mat-label>Goles</mat-label>
-                <mat-select matNativeControl formControlName="golesEscogidos">
-                  <mat-option matInput *ngFor="let gol of arrayGoles" [value]="gol">
-                    {{gol}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-
-              <mat-form-field class=" esquina" appearance="fill">
-                <mat-label>Esquinas</mat-label>
-                <mat-select matNativeControl formControlName="golesMenosEsquinas">
-                  <mat-option matInput *ngFor="let esquina of arrayMenosEsquinas" [value]="esquina">
-                    {{esquina}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-
-              <mat-form-field class="extra" appearance="fill">
-                <mat-label>Extra</mat-label>
-                <mat-select [(value)]="selected" matNativeControl formControlName="extraTime">
-                  <!-- <mat-option>0</mat-option> -->
-                  <mat-option value="0">0</mat-option>
-                  <mat-option value="1">1</mat-option>
-                  <mat-option value="2">2</mat-option>
-                  <mat-option value="3">3</mat-option>
-                  <mat-option value="4">4</mat-option>
-                  <mat-option value="5">5</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-              <!-- <input type="number" class="minuto" formControlName="minutos" placeholder="minutos" min="75" max="89"> -->
-            <!-- <input type="number" class="" formControlName="segundos" placeholder="segundos" min="0" max="59"> -->
-            <!-- <mat-form-field class="goles" appearance="fill">
-                <mat-label>Goles</mat-label>
-                <input type="text" class="primary " matInput autocomplete="off" formControlName="goles" placeholder="Goles">
-              </mat-form-field> -->
-
-              
-            <!-- <input type="text" class="" formControlName="goles" placeholder="goles"> -->
-            <h2> {{span}} </h2>
-            
-        
-            <button mat-raised-button color="primary" type="submit">{{actionBtn}}</button>
-            <!-- <button type="submit">{{actionBtn}}</button> -->
-            
-        
-        
-        </form>
-    </mat-card>
+<div class="calc">
+  
+  <app-menos-one></app-menos-one>
+  <app-menos-dos></app-menos-dos>
+  <app-menos-tres></app-menos-tres>
 </div>
-<app-menos-dos></app-menos-dos>
-<app-menos-tres></app-menos-tres>

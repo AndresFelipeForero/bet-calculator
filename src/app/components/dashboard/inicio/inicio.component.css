@@ -6,68 +6,9 @@
     background-color: #ffffff
 }
 
-
-.calculadora-goles{
-    /* background: red; */
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
-    background: #e8eaf6;
-    padding-left: 0%;
-    padding-right: 0%;
-    
-    /* background-color: aquamarine; */
-    /* border-radius: 6%;
-    border: solid 1px aquamarine; */
-    /* background-color: black; */
-}
-
-.ancho {
-    width: 35%;
-}
-.esquina{
-    width: 32%;
-}
-.goles{
-    width: 27%;
-}
-
-.extra {
-    width: 22%;
-}
-
-.min-seg {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    /* background-color: blueviolet; */
-}
-.min-seg {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    /* background-color: blueviolet; */
-}
-
-.goles-esquinas {
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    justify-content: space-between;
-    /* margin-top: 20px; */
-    /* background-color: blueviolet; */
-}
-.form{
-    /* background-color: brown; */
-}
-
-.time-couta {
+.calc {
+    margin-top: 4vh;
     display: flex;
     justify-content: space-evenly;
 }
 
-
-
-.title {
-    /* color: #7986cb */
-}

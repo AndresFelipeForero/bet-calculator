@@ -21,6 +21,7 @@ export class MenosDosComponent implements OnInit {
   goles: number = 2.5;
   esquinas: number = 9.5;
   selected = '0';
+  icon: string = "edit"
   
   
 
@@ -131,6 +132,7 @@ export class MenosDosComponent implements OnInit {
             //  y2 = this.datosDirectos[minutos][goles];
             
             if (minutos < 1) {
+              y2 = this.datosDirectos[minutos][goles];
               y2E = this.dataMenosEsquinas[minutos][esquinas]; //y2 esquinas
               y1E = 1;
               y1 = 1;
@@ -175,6 +177,15 @@ export class MenosDosComponent implements OnInit {
 
   cambiarFlag(){
     this.flag=!this.flag    
+  }
+
+  changeName(){
+    let $inputTitle = document.querySelector(".title-2")!
+    if ($inputTitle.toggleAttribute("disabled")) {
+      this.icon = "edit"    
+    } else {
+      this.icon = "save"  
+    }
   }
 
   dataMenosEsquinas: any[]= [

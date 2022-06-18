@@ -57,9 +57,6 @@
     /* margin-top: 20px; */
     /* background-color: blueviolet; */
 }
-.form{
-    /* background-color: brown; */
-}
 
 .time-couta {
     display: flex;
@@ -68,6 +65,29 @@
 
 
 
-.title {
-    /* color: #7986cb */
+.title-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    align-content: center;
+    align-items: center;
+    
+    
+}
+
+.title-2 {
+    /* background-color: blue; */
+    display: block;
+    margin: auto 0px auto 0px;
+    width: 203px;  
+    font-size: large; 
+    color: #000000;
+}
+
+.btn-title{
+    /* background-color: rgb(0, 89, 130); */
+    color: rgb(0, 89, 130);
+    
 }

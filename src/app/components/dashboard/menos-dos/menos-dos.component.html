@@ -1,17 +1,22 @@
 <div class="body">
     <mat-card class="calculadora-goles" >
-        <form [formGroup]="form" class="form" (submit)="submitForm()">
-            <mat-card-title class="title" color="primary">Calculadora de Goles</mat-card-title>
-            <div class="time-couta">
-              <div class="time">
-                <h4> Time <br>{{showTime}} </h4>
-              </div>
-              <div class="goles-esquinas">
+      <div class="title-content">
 
-                <h4> Goles <br>{{yF}} </h4> &nbsp; &nbsp;&nbsp; &nbsp;
+        <input class="title-2" type="text" placeholder="Partido 2" disabled>
+        <button class="btn-title small" (click)="changeName()" mat-icon-button>
+          <mat-icon class="icon">{{icon}}</mat-icon>
+        </button> 
+        
+      </div>
+        <form [formGroup]="form" class="form" (submit)="submitForm()">
+            
+            <div class="time-couta">
+              
+                <h4> Time <br>{{showTime}} </h4>
+              
+                <h4> Goles <br>{{yF}} </h4> 
                 
-                <h4> Esquinas <br>{{yFE}} </h4>
-              </div>
+                <h4> Esquinas <br>{{yFE}} </h4>              
 
             </div>
 

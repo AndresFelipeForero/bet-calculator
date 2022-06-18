@@ -21,6 +21,7 @@ export class MenosOneComponent implements OnInit {
   goles: number = 2.5;
   esquinas: number = 9.5;
   selected = '0';
+  icon: string = "edit"
   
   
 
@@ -35,9 +36,7 @@ export class MenosOneComponent implements OnInit {
   }
 
   ngOnInit(): void { 
-    // let pbr = parseFloat(this.form.value.golesMenosEsquinas)    
     
-  //  this.arrayMenosEsquinas[0][pbr]
    this.getArrayGoles() 
    this.getArrayMenosEsquinas() 
   
@@ -59,11 +58,7 @@ export class MenosOneComponent implements OnInit {
   }
 
   submitForm(){
-    // if (this.form.invalid && this.actionBtn == "Stop") {
-      
-    //   this.actionBtn="Start"
-    //   this.hallarGol()
-    // } 
+    
     if (this.form.invalid) {return} 
     else {this.hallarGol()}
 
@@ -86,18 +81,7 @@ export class MenosOneComponent implements OnInit {
         y1E = 0, //y2 esquinas
         bE = 0; //y2 esquinas
 
-        // if (minutos < 0){this.span = "Partido finalizado.  si está en tiempo extra, ingrese el valor 89 y agregue los minutos adicionales con el botón '1+'"
-        // setTimeout(() => {
-        //   this.span = ""          
-        // }, 6000);
-        // return
-        // }
-
-        // if (minutos >= 15) { 
-        //   minutos = 14;
-        //   segundos = 60  
-        // }   
-
+       
         if (this.flag == true) {
           this.actionBtn = 'Stop';
         }
@@ -125,21 +109,14 @@ export class MenosOneComponent implements OnInit {
               y2E = this.dataMenosEsquinas[minutos][esquinas]; //y2 esquinas
               y1E = this.dataMenosEsquinas[minutos-1][esquinas]; //y2 esquinas
             }
-            
-                        
-            // lo que sirve
-            //  y2 = this.datosDirectos[minutos][goles];
-            
+                       
             if (minutos < 1) {
+              y2 = this.datosDirectos[minutos][goles];
               y2E = this.dataMenosEsquinas[minutos][esquinas]; //y2 esquinas
               y1E = 1;
               y1 = 1;
             }
-            //  else {
-            //   y1 = this.datosDirectos[minutos-1][goles];
-            // }
-            // console.log(y2E)
-            // console.log(y1E)
+            
             let m = (y2 - y1)/x;
             b = y2 - m * x;
                 
@@ -157,9 +134,7 @@ export class MenosOneComponent implements OnInit {
               segundos = segundos - 1;            
               this.showTime = `${minutos} : ${segundos}`;
               console.log(minutos , segundos);
-              // console.log(this.yF)
-              
-              
+                               
               if (segundos == 0) { 
                 if ( segundos == 0 && minutos == 0) {return} 
                          
@@ -175,6 +150,15 @@ export class MenosOneComponent implements OnInit {
 
   cambiarFlag(){
     this.flag=!this.flag    
+  }
+
+  changeName(){
+    let $inputTitle = document.querySelector(".title-1")!
+    if ($inputTitle.toggleAttribute("disabled")) {
+      this.icon = "edit"    
+    } else {
+      this.icon = "save"  
+    }
   }
 
   dataMenosEsquinas: any[]= [
