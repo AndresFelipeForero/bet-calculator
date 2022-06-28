@@ -10,6 +10,7 @@ import { ReportesComponent } from './reportes/reportes.component';
 import { MenosDosComponent } from './menos-dos/menos-dos.component';
 import { MenosTresComponent } from './menos-tres/menos-tres.component';
 import { MenosOneComponent } from './menos-one/menos-one.component';
+import { MasOneComponent } from './mas-one/mas-one.component';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { MenosOneComponent } from './menos-one/menos-one.component';
     DashboardComponent,
     InicioComponent,
     NavbarComponent,    
-    ReportesComponent, MenosDosComponent, MenosTresComponent, MenosOneComponent
+    ReportesComponent, MenosDosComponent, MenosTresComponent, MenosOneComponent, MasOneComponent
   ],
   imports: [
     CommonModule,
