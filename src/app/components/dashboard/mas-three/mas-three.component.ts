@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-mas-one',
-  templateUrl: './mas-one.component.html',
-  styleUrls: ['./mas-one.component.css']
+  selector: 'app-mas-three',
+  templateUrl: './mas-three.component.html',
+  styleUrls: ['./mas-three.component.css']
 })
-export class MasOneComponent implements OnInit {
+export class MasThreeComponent implements OnInit {
 
   form: FormGroup;
   yF?: string;
@@ -158,7 +158,7 @@ export class MasOneComponent implements OnInit {
   }
 
   changeName(){
-    let $inputTitle = document.querySelector(".title-4")!
+    let $inputTitle = document.querySelector(".title-6")!
     if ($inputTitle.toggleAttribute("disabled")) {
       this.icon = "edit"    
     } else {
