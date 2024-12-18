@@ -7,11 +7,13 @@
 }
 
 .calc {
-    margin-top: 4vh;
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 1040px;
-    margin-left: auto;
-    margin-right: auto;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
+h2{
+    text-align: center;
+    color:#6852FF ;
+    font-weight: bold;
+}

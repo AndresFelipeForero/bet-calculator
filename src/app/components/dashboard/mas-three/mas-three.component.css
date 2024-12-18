@@ -33,7 +33,7 @@
 }
 
 .extra {
-    width: 22%;
+    width: 25%;
 }
 
 .min-seg {
@@ -69,20 +69,24 @@
     margin-right: 10px;
     display: flex;
     justify-content: space-between;
-    /* background-color: red; */
     align-content: center;
     align-items: center;
-    
-    
 }
 
-.title-6 {
-    /* background-color: blue; */
+.title-1 {
     display: block;
     margin: auto 0px auto 0px;
-    width: 203px;  
-    font-size: large; 
+    width: 100%;
+    font-size: large;
     color: #000000;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.title-1:not(:focus) {
+    background-color: #e8eaf6;
 }
 
 .btn-title{
@@ -91,5 +95,7 @@
     
 }
 
-
+.firsttime{
+    font-weight: bold;
+}
 

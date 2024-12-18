@@ -2,8 +2,8 @@
     <mat-card class="calculadora-goles" >
       <div class="title-content">
 
-        <input class="title-6" type="text" placeholder="Partido 6" disabled>
-        <button class="btn-title small" (click)="changeName()" mat-icon-button>
+        <input class="title-1" type="text" placeholder="Partido 6" enable>
+        <button class="btn-title small" mat-icon-button>
           <mat-icon class="icon">{{icon}}</mat-icon>
         </button> 
         
@@ -13,11 +13,11 @@
           
             <div class="time-couta">
               
-                <h4> Time <br>{{showTime}} </h4>
+                <h4 class="firsttime"> Time <br>{{showTime}} </h4>
               
-                <h4> Goles <br>{{yF}} </h4> 
+                <h4 class="firsttime"> Goles <br>{{yF}} </h4> 
                 
-                <h4> Esquinas <br>{{yFE}} </h4>
+                <h4 class="firsttime"> Esquinas <br>{{yFE}} </h4>
               
 
             </div>
@@ -47,7 +47,7 @@
               <mat-form-field class=" esquina" appearance="fill">
                 <mat-label>Esquinas</mat-label>
                 <mat-select matNativeControl formControlName="golesMenosEsquinas">
-                  <mat-option matInput *ngFor="let esquina of arrayMenosEsquinas" [value]="esquina">
+                  <mat-option matInput *ngFor="let esquina of arrayMasEsquinas" [value]="esquina">
                     {{esquina}}
                   </mat-option>
                 </mat-select>
@@ -63,6 +63,11 @@
                   <mat-option value="3">3</mat-option>
                   <mat-option value="4">4</mat-option>
                   <mat-option value="5">5</mat-option>
+                  <mat-option value="6">6</mat-option>
+                  <mat-option value="7">7</mat-option>
+                  <mat-option value="8">8</mat-option>
+                  <mat-option value="9">9</mat-option>
+                  <mat-option value="10">10</mat-option>
                 </mat-select>
               </mat-form-field>
             </div>

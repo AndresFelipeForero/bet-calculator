@@ -2,8 +2,8 @@
     <mat-card class="calculadora-goles" >
       <div class="title-content">
 
-        <input class="title-2" type="text" placeholder="Partido 2" disabled>
-        <button class="btn-title small" (click)="changeName()" mat-icon-button>
+        <input class="title-1" type="text" placeholder="Partido 2" enable>
+        <button class="btn-title small" mat-icon-button>
           <mat-icon class="icon">{{icon}}</mat-icon>
         </button> 
         
@@ -12,11 +12,11 @@
             
             <div class="time-couta">
               
-                <h4> Time <br>{{showTime}} </h4>
+                <h4 class="firsttime"> Time <br>{{showTime}} </h4>
               
-                <h4> Goles <br>{{yF}} </h4> 
+                <h4 class="firsttime"> Goles <br>{{yF}} </h4> 
                 
-                <h4> Esquinas <br>{{yFE}} </h4>              
+                <h4 class="firsttime"> Esquinas <br>{{yFE}} </h4>              
 
             </div>
 
